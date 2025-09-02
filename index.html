@@ -3,12 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"> 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
         integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ==">
     <title>HTML Form</title>
     <link rel="stylesheet" href="style.css">
+
 </head>
 <body>
     <div class="container border">
@@ -18,34 +20,34 @@
             <div class="row justify-content-center mt-2">
                 <div class="col-md-6">  
                     <label for="username" class="form-label">Card #</label><br>
-                    <input type="text" id="username" name="username" class="form-control" placeholder="XXXXXXXXXXXXXXXXX"><br>
+                    <input required type="text" id="username" name="username" class="form-control" placeholder="XXXXXXXXXXXXXXXXX"><br>
                 </div>
                 <div class="col-md-2">
                     <label for="username" class="form-label">CVC #</label><br>
-                    <input type="text" id="username" name="username" class="form-control" placeholder="0000"><br>
+                    <input required type="text" id="username" name="username" class="form-control" placeholder="0000"><br>
                 </div>
                 <div class="col-md-4">
                     <label for="username" class="form-label">Amount</label><br>
-                    <div class="d-flex">
-                        <div class="mx-auto align-items-center">$</div>
-                        <input type="text" id="username" name="username class" class="form-control" placeholder="Amount"><br>
+                    <div class="d-flex align-items-center">
+                        <div class="mx-auto me-1">$</div>
+                        <input required type="text" id="username" name="username class" class="form-control" placeholder="Amount"><br>
                     </div>
                 </div>
             </div>
             <div class="row justify-content-center">
                 <div class="col-md-6">
                     <label for="username" class="form-label">First name</label><br>
-                    <input type="text" id="username" name="username" class="form-control"><br>
+                    <input required type="text" id="username" name="username" class="form-control"><br>
                 </div>
                 <div class="col-md-6">
                     <label for="username" class="form-label">Last name</label><br>
-                    <input type="text" id="username" name="username" class="form-control"><br>
+                    <input required type="text" id="username" name="username" class="form-control"><br>
                 </div>
             </div>
             <div class="row justify-content-center">
                 <div class="col-md-6">
                     <label for="username" class="form-label">City</label><br>
-                    <input type="text" id="username" name="username" class="form-control"><br>
+                    <input type="text" required id="username" name="username" class="form-control"><br>
                 </div>
                 <div class="col-md-3">
                     <label for="username" class="form-label">Country</label><br>
@@ -64,34 +66,40 @@
             <div class="row">
             <div class="col-md-6">
                 <label for="username" class="form-label">Payment methods</label><br>
-                <div class="bg-light col-md-4">
+                <div class="bg-light col-md-7">
                     <div class="form-check form-check-inline m-2">
                         <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
-                        <label class="form-check-label" for="inlineRadio1"><i class="bi bi-credit-card h3"></i></label>
+                        <label class="form-check-label" for="inlineRadio1"><i class="fa-brands fa-cc-visa fs-3"></i></label>
                     </div>
                     <div class="form-check form-check-inline">
                         <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
-                        <label class="form-check-label" for="inlineRadio2"><i class="bi bi-alipay h3"></i></label>
+                        <label class="form-check-label" for="inlineRadio2"><i class="fa-brands fa-cc-mastercard fs-3"></i></label>
                     </div>
                     <div class="form-check form-check-inline">
                         <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
-                        <label class="form-check-label" for="inlineRadio2"><i class="bi bi-stripe h3"></i></label>
+                        <label class="form-check-label" for="inlineRadio2"><i class="fa-brands fa-cc-discover fs-3"></i></label>
+                    </div>
+                                        <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+                        <label class="form-check-label" for="inlineRadio2"><i class="fa-brands fa-usps fs-3"></i></label>
                     </div>
                 </div>
             </div>
             <div class="col-md-6">
                 <div class="mb-3">
-                <label for="exampleFormControlTextarea1" class="form-label">Example textarea</label>
+                <label for="exampleFormControlTextarea1" class="form-label">Message</label>
                 <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
                 </div>
+                <div class="form-text mt-0 mb-2">Add any notes here.</div>
             </div>
             </div>
         </div>
-    </form>
     <div class="row justify-content-end bg-light d-flex">
-        <button type="button" class="btn btn-primary col-md-1 m-2">Send</button>
-        <button type="button" class="btn btn-secondary col-md-1 m-2">Cancel</button>
+        <button type="button" class="btn btn-primary col-md-1 col-sm-3 m-2">Send</button>
+        <button type="button" class="btn btn-secondary col-md-1 col-sm-3 m-2">Cancel</button>
     </div>
+    </form>
+
     
 
 
